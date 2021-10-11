@@ -1,0 +1,19 @@
+<%- include ('header') %>
+
+<form method="GET" action="cotacao">
+    <input name="cotacao" type="text" placeholder="Cotação Dolar:">
+    <input name="quantidade" type="text" placeholder="Quantidade De Dolares:">
+    <button>Converter!!</button>
+</form>
+<div class="cotacao">
+    <% if(error){ %>
+        <%= error %>
+    <% }else{ %>
+        <%= quantidade %> 
+        dolares na cotação 
+        <%= cotacao %> é igual a: <%= conversao %> reais
+    <% } %>
+</div>
+
+<%- include ('footer') %>
+
