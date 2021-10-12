@@ -1,6 +1,7 @@
 {
   "name": "convertmoney",
   "version": "2.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -18,39 +19,30 @@
   "directories": {
     "lib": "lib"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/felipe-programador-18/convertmoney.git"
-  },
-  "bugs": {
-    "url": "https://github.com/felipe-programador-18/convertmoney/issues"
-  },
-  "homepage": "https://github.com/felipe-programador-18/convertmoney#readme",
-  "description": "",
   "builds": [
     {
-        "src": "index.js",
-        "use": "@now/node-server"
+      "src": "index.js",
+      "use": "@now/node-server"
     }
-],
-"routes": [
+  ],
+  "routes": [
     {
-        "src": "/(.*)",
-        "dest": "/"
+      "src": "/(.*)",
+      "dest": "/"
     },
     {
-        "src": "/",
-        "dest": "/index.js",
-        "methods": [
-            "GET"
-        ]
+      "src": "/",
+      "dest": "/index.js",
+      "methods": [
+        "GET"
+      ]
     },
     {
-        "src": "/cotacao",
-        "dest": "/index.js",
-        "methods": [
-            "GET"
-        ]
-      }
-    ]
+      "src": "/cotacao",
+      "dest": "/index.js",
+      "methods": [
+        "GET"
+      ]
+    }
+  ]
 }
