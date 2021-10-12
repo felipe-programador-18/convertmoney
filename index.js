@@ -13,10 +13,9 @@ app.get('/', ( req, res) => {
      res.render('home')
 })
 
-app.get('/cotacao', (req, res) =>{
-    const{cotacao, quantidade} = req.query
-    
-    if(cotacao && quantidade ==''){
+app.get('/cotacao', (req, res) => {
+    const { cotacao, quantidade } = req.query
+    if(cotacao && quantidade){
     const conversao = convert.convert(cotacao, quantidade) 
 
     res.render('cotacao', {
