@@ -1,7 +1,6 @@
 {
   "name": "convertmymoney",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -19,5 +18,17 @@
   },
   "jest": {
     "collectCoverage": true
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipe-programador-18/convertmoney.git"
+  },
+  "bugs": {
+    "url": "https://github.com/felipe-programador-18/convertmoney/issues"
+  },
+  "homepage": "https://github.com/felipe-programador-18/convertmoney#readme",
+  "description": ""
 }
