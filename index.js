@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const path =  require('path')
 const convert = require('./lib/convert')
+const Apibanc = require('./lib/banbrasil')
 
 app.set('view engine', 'ejs')
 
@@ -9,8 +10,10 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
 
-app.get('/', ( req, res) => {
-     res.render('home')
+app.get('/', async ( req, res) => {
+    const cotacao = await  Apibanc.Getcotacao()
+    console.log('cotacao', cotacao) 
+    res.render('home')
 })
 
 app.get('/cotacao', (req, res) => {
